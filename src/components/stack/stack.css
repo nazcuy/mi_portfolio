@@ -1,0 +1,95 @@
+#stack {
+  background-color: black;
+  filter: brightness(1);
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.stack {
+  background-color: #ffffff;
+  padding: 80px 20px;
+}
+
+.stack-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #6b3bff, #7a5bff);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.stack-card {
+  background: linear-gradient(rgba(0, 0, 0, 0.267) 100%);
+  border-radius: 12px;
+  border-color: var(--background-light);
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.stack-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.stack-date {
+  font-size: 0.85rem;
+  color: #17a2b8;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stack-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.stack-excerpt {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 20px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+}

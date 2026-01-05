@@ -1,0 +1,117 @@
+#presentation {
+  background-image: url('/public/images/fondo\ negro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.presentation {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 80px 20px;
+  border-bottom: 1px solid #dee2e6;
+  overflow: hidden;
+}
+
+.presentation-container {
+  max-width: 1200px;
+  margin: 0 auto 200px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.presentation-circular {
+  flex-shrink: 0;
+  order: 2;
+  margin-left: auto; 
+}
+
+.presentation-content {
+  order: 1;
+  text-align: left;
+}
+
+.rotating-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  color: #ffffff;
+  padding: 0.25rem 0.9rem;
+  border-radius: 12px;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(132, 73, 191, 0.2);
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.rotating-pill .text-rotate {
+  display: inline-block;
+}
+
+.rotating-pill .text-rotate-element {
+  display: inline-block;
+}
+
+.presentation-content {
+  flex: 1;
+}
+
+.presentation-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.presentation-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.presentation-description {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055) 100%);
+  border-radius: 12px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    padding: 50px 20px;
+  }
+
+  .presentation-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .presentation-circular {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .presentation-content {
+    order: 2;
+  }
+
+  .presentation-title {
+    font-size: 1.8rem;
+  }
+
+  .presentation-subtitle {
+    font-size: 1.3rem;
+  }
+}
