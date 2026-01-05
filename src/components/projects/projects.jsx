@@ -5,28 +5,28 @@ import './projects.css';
 const projectsData = [
   {
     id: 1,
-    title: 'Sistema de Gestión Cooperativa',
-    description: 'Plataforma integral para la administración de cooperativas, incluyendo gestión de socios, finanzas y recursos.'
+    title: 'Sistema de Generación Automatizada de Informes para Obras Públicas',
+    description: 'Sistema de automatización gubernamental para generación masiva de informes PDF profesionales a partir de datos de Excel y Google Sheets. Automatización completa del proceso de generación de informes para obras públicas paralizadas, eliminando errores manuales y garantizando consistencia en el formato de salida. Mi rol: Arquitectura, desarrollo completo e implementación.'
   },
   {
     id: 2,
-    title: 'E-commerce para Pequeños Comercios',
-    description: 'Tienda en línea diseñada específicamente para pequeños comerciantes, con gestión de inventario y pagos integrados.'
+    title: 'E-commerce para Cooperativa Tecnológica "Martín Fierro" (en desarrollo)',
+    description: 'Plataforma de comercio electrónico para cooperativa tecnológica.'
   },
   {
     id: 3,
-    title: 'App de Seguimiento de Proyectos',
-    description: 'Aplicación web para equipos de desarrollo que permite gestionar tareas, sprints y colaboración en tiempo real.'
+    title: 'Sistema de Relevamiento Barrial Sanitario',
+    description: 'Aplicación para celulares que permite gestionar la carga de historias clínicas de los barrios populares.'
   },
   {
     id: 4,
-    title: 'Portal de Empleos Cooperativo',
-    description: 'Plataforma que conecta trabajadores con cooperativas, fomentando la economía solidaria y el empleo digno.'
+    title: 'Sistema de gestión de Farmacia',
+    description: 'Sistema de gestión de farmacia que permite la gestión de inventario, ventas y compras.'
   },
   {
     id: 5,
-    title: 'Sistema de Facturación Electrónica',
-    description: 'Solución completa para la generación y gestión de facturas electrónicas, cumplimiento normativo incluido.'
+    title: 'Proyecto de seguridad hogareña IoT',
+    description: 'Proyecto de seguridad hogareña IoT que permite la gestión de la seguridad de la casa.'
   },
   {
     id: 6,
