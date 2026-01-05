@@ -47,9 +47,9 @@ function Projects() {
       <div className="projects-container">
         <h2 className="section-title">Nuestros Proyectos</h2>
         <div className="projects-grid">
-          {projectsData.map(project => (
-            <div 
-              key={project.id} 
+          {projectsData.map((project) => (
+            <div
+              key={project.id}
               className="project-card"
               onClick={() => handleProjectClick(project.id)}
             >

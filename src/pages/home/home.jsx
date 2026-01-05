@@ -9,8 +9,8 @@ function Home() {
   return (
     <div className="home">
       <Presentation />
-      <Projects />
       <Stack />
+      <Projects />
       <AboutMe />
     </div>
   );
