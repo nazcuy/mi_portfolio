@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutMe.css";
+import "./AboutMe.css";
 import Stack from "../galeria/galeria";
 import img1 from '../../assets/images/images-galeria/1.JPG';
 import img2 from '../../assets/images/images-galeria/2.jpg';
