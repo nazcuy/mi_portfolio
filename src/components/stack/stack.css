@@ -75,6 +75,17 @@
   line-height: 1.7;
 }
 
+.stack-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.stack-card:hover .stack-icon {
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 50px 20px;
