@@ -6,10 +6,10 @@ const stackData = [
     id: 1,
     category: 'Frontend',
     icons: [
-      { src: "https://img.icons8.com/arcade/64/html-5.png", alt: "HTML" },
-      
-      { src: "https://img.icons8.com/nolan/96/react-native.png", alt: "React" },
-      { src: "https://img.icons8.com/arcade/64/javascript.png", alt: "JS" }
+      { src: "https://img.icons8.com/color/48/html-5--v1.png", alt: "HTML" },
+      { src: "https://img.icons8.com/color/48/css3.png", alt: "CSS" },
+      { src: "https://img.icons8.com/color/48/react-native.png", alt: "React" },
+      { src: "https://img.icons8.com/color/48/javascript--v1.png", alt: "JS" },
       
     ],
     excerpt: 'Creación de interfaces modernas, responsivas y optimizadas utilizando React y ecosistemas de JavaScript moderno.'
@@ -18,10 +18,13 @@ const stackData = [
     id: 2,
     category: 'Backend',
     icons: [
-      { src: "https://img.icons8.com/nolan/96/node-js.png", alt: "Node.js" },
-      { src: "https://img.icons8.com/nolan/96/my-sql.png", alt: "MySql" },
-      { src: "https://img.icons8.com/fluency/48/my-sql.png", alt: "PostgreSQL" },
-      { src: "https://img.icons8.com/?size=100&id=W3gfKnMhfM6h&format=png&color=000000", alt: "Node.js" }
+      { src: "https://img.icons8.com/color/48/nodejs.png", alt: "Node.js" },
+      { src: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-nodejs-is-an-open-source-cross-platform-javascript-run-time-environment-logo-shadow-tal-revivo.png", alt: "Node.js" },
+      { src: "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png", alt: "Java" },
+      { src: "https://img.icons8.com/color/48/spring-logo.png", alt: "Spring" },
+      { src: "https://img.icons8.com/color/48/python--v1.png", alt: "Python" },
+      { src: "https://img.icons8.com/fluency/48/my-sql.png", alt: "MySql" },
+      
     ],
     excerpt: 'Diseño de arquitecturas escalables y APIs robustas, con foco en la seguridad y el rendimiento del servidor.'
   },  {
@@ -30,7 +33,7 @@ const stackData = [
     icons: [
       { src: "https://img.icons8.com/nolan/96/react-native.png", alt: "React" },
       { src: "https://img.icons8.com/arcade/64/javascript.png", alt: "JS" },
-      { src: "https://img.icons8.com/arcade/64/android-os.png", alt: "Android" }
+      { src: "https://img.icons8.com/arcade/64/android-os.png", alt: "Android" },
     ],
     excerpt: 'Creación de interfaces modernas, responsivas y optimizadas utilizando React y ecosistemas de JavaScript moderno.'
   },
@@ -38,8 +41,9 @@ const stackData = [
     id: 2,
     category: 'Integración IoT',
     icons: [
-      { src: "https://img.icons8.com/wired/64/node-js.png", alt: "Node.js" },
-      { src: "https://img.icons8.com/wired/64/postgre-sql.png", alt: "PostgreSQL" }
+      { src: "https://img.icons8.com/fluency/48/arduino.png", alt: "Arduino" },
+      { src: "https://img.icons8.com/color/48/python--v1.png", alt: "Python" },
+      { src: "https://img.icons8.com/stickers/100/arduino-uno-board.png", alt: "UNO" }
     ],
     excerpt: 'Diseño de arquitecturas escalables y APIs robustas, con foco en la seguridad y el rendimiento del servidor.'
   }
