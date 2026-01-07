@@ -70,9 +70,9 @@ function Stack() {
 }
 function AnimatedCard({ item, index }) {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Solo se activa una vez
-    threshold: 0.1, // Cuando el 10% del elemento sea visible
-    delay: index * 100, // Retraso escalonado
+    triggerOnce: false,
+    threshold: 0.7,
+    delay: index * 100,
   });
 
   return (
@@ -86,8 +86,8 @@ function AnimatedCard({ item, index }) {
         {item.icons.map((icon, idx) => (
           <div key={idx} className="icon-wrapper">
             <img 
-              width="48" 
-              height="48" 
+              width="50" 
+              height="50" 
               src={icon.src} 
               alt={icon.alt} 
               className="stack-icon"
