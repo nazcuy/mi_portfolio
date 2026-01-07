@@ -11,6 +11,9 @@ function Navbar() {
           <div className="navbar-logo">
             <img src={logo} alt="Logo" style={{ width: '100%', height: '100%' }} />
           </div>
+          <div className='curriculum'>
+              <img width="45" height="45" src="https://img.icons8.com/wired/64/resume.png" alt="resume"/>
+          </div>
         </Link>
         <ul className="navbar-menu">
           <li>
