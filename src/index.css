@@ -12,10 +12,9 @@
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-medium: rgba(0, 0, 0, 0.15);
   --transition-default: all 0.3s ease;
-  --font-primary: 'Hammersmith One', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-primary: 'Hammersmith One', 'Manrope', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Load Hammersmith One font */
 @font-face {
   font-family: 'Hammersmith One';
   src: url('./assets/fonts/Hammersmith_One/HammersmithOne-Regular.ttf') format('truetype');
@@ -24,7 +23,14 @@
   font-display: swap;
 }
 
-/* Reset y base */
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts//Manrope/static/Manrope-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
