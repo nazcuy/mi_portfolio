@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import tecladoNeon from '../../assets/images/teclado-neon.jpg';
+import teclado from '../../assets/images/teclado.jpg';
 import './stack.css';
 
 const stackData = [
@@ -51,14 +51,19 @@ const stackData = [
 
 function Stack() {
   const [activeCard, setActiveCard] = useState(null);
-  const { ref: containerRef, inView } = useInView({
-    triggerOnce: false,
+  const { ref: cardsRef, inView: cardsInView } = useInView({
+    triggerOnce: true,
     threshold: 0.1,
+  });
+
+  const { ref: imageRef, inView: imageInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+    delay: 300, // Delay para que aparezca después de las tarjetas
   });
 
   const handleCardClick = (cardId) => {
     if (activeCard === cardId) {
-      // Si la tarjeta ya está activa, la cerramos
       setActiveCard(null);
     } else {
       // Si no, la abrimos (esto cierra cualquier otra abierta)
@@ -79,16 +84,15 @@ function Stack() {
       <div className="stack-container">
         <h2 className="stack-main-title">Stack Tecnológico</h2>
         
-        <div className="stack-content" ref={containerRef}>
-          <div className="stack-left">
+        <div className="stack-cards-container" ref={cardsRef}>
+          <div className="stack-cards">
             {stackData.map((item, index) => (
               <div 
                 key={item.id}
-                className={`stack-rectangle ${activeCard === item.id ? 'active' : ''} ${inView ? 'slide-in' : ''}`}
+                className={`stack-rectangle ${activeCard === item.id ? 'active' : ''} ${cardsInView ? 'slide-in' : ''}`}
                 onClick={() => handleCardClick(item.id)}
-                onMouseEnter={() => handleCardHover(item.id)}
                 style={{ 
-                  transitionDelay: inView ? `${index * 0.15}s` : '0s'
+                  transitionDelay: cardsInView ? `${index * 0.15}s` : '0s'
                 }}
               >
                 <h3 className="stack-rectangle-title">{item.category}</h3>
@@ -108,19 +112,16 @@ function Stack() {
               </div>
             ))}
           </div>
-          
-          {/* Lado derecho - Imagen */}
-          <div className="stack-right">
-            <div 
-              className={`stack-image-container ${inView ? 'slide-in' : ''}`}
-              style={{ transitionDelay: inView ? '0.6s' : '0s' }}
-            >
-              <img 
-                src={tecladoNeon} 
-                alt="Stack Tecnológico"
-                className="stack-image"
-              />
-            </div>
+        </div>
+        
+        {/* SECCIÓN DE IMAGEN INDEPENDIENTE */}
+        <div className="stack-image-section" ref={imageRef}>
+          <div className={`stack-image-container ${imageInView ? 'slide-up' : ''}`}>
+            <img 
+              src={teclado} 
+              alt="Stack Tecnológico"
+              className="stack-image"
+            />
           </div>
         </div>
       </div>
