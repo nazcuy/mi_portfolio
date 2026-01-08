@@ -1,28 +1,28 @@
-import React from "react";
 /* import CircularText from "../circularText/circularText";
 import RotatingText from "../../../src/components/rotatingText/RotatingText.jsx"; */
+import React from "react";
 import "./presentation.css";
 
 function Presentation() {
-    return (
+  return (
     <section id="presentation">
       <div className="presentation-container">
-        {/* Rectángulo superior derecho */}
+        {/* Rectángulo superior derecho - Texto en UNA línea */}
         <div className="rectangle-top-right">
-          <div className="line1">DESARROLLADOR</div>
-          <div className="line2">DE SOFTWARE</div>
+          <div className="single-line">
+            <span className="bold-text">DESARROLLADOR</span>
+            <span className="normal-text"> DE SOFTWARE</span>
+          </div>
         </div>
         
-        {/* Rectángulo inferior izquierdo */}
+        {/* Rectángulo inferior izquierdo - Texto en UNA línea */}
         <div className="rectangle-bottom-left">
-          <div className="line1">AZCUY</div>
-          <div className="line2">NICOLÁS</div>
+          <div className="single-line">
+            <span className="bold-text">AZCUY</span>
+            <span className="normal-text"> NICOLÁS</span>
+          </div>
         </div>
-        
-        {/* Elementos decorativos opcionales */}
-        <div className="connecting-line"></div>
-        <div className="corner-dot tr"></div>
-        <div className="corner-dot bl"></div>
+
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navBar.css';
-import logo from '../../assets/icons/icononuevo.png';
+import logo from '../../assets/images/Nicolas-Azcuy.jpg';
 
 function Navbar() {
   return (
