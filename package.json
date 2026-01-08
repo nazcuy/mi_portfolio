@@ -1,7 +1,7 @@
 {
-  "name": "codigo-fidel",
+  "name": "portfolio-nicolas-azcuy",
   "version": "1.0.0",
-  "description": "Página web de la Cooperativa de Trabajadores Informáticos - Código Fidel",
+  "description": "Portfolio de Nicolás Azcuy - Desarrollador de Software",
   "private": true,
   "dependencies": {
     "motion": "^12.23.26",
