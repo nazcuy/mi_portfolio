@@ -12,7 +12,7 @@
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-medium: rgba(0, 0, 0, 0.15);
   --transition-default: all 0.3s ease;
-  --font-primary: 'Hammersmith One', 'Manrope', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-primary: 'Hammersmith One', 'Manrope', 'JetBrainsMono-Light', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 @font-face {
@@ -26,6 +26,14 @@
 @font-face {
   font-family: 'Manrope';
   src: url('./assets/fonts/Manrope/static/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-Light';
+  src: url('./assets/fonts/JetBrains_Mono/static/JetBrainsMono-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;

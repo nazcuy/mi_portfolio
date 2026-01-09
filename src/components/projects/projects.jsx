@@ -5,34 +5,39 @@ import './projects.css';
 const projectsData = [
   {
     id: 1,
-    title: 'Sistema de Generación Automatizada de Informes para Obras Públicas',
-    description: 'Sistema de automatización gubernamental para generación masiva de informes PDF profesionales a partir de datos de Excel y Google Sheets. Automatización completa del proceso de generación de informes para obras públicas paralizadas, eliminando errores manuales y garantizando consistencia en el formato de salida. Mi rol: Arquitectura, desarrollo completo e implementación.'
+    title: 'Sistema de Generación Automatizada de Informes',
+    description: 'Sistema de automatización gubernamental para generación masiva de informes PDF profesionales a partir de datos de Excel y Google Sheets.',
+    imageUrl: 'src/assets/images/automation-system.jpg',
+    category: 'Automatización'
   },
   {
     id: 2,
-    title: 'E-commerce para Cooperativa Tecnológica "Martín Fierro" (en desarrollo)',
-    description: 'Plataforma de comercio electrónico para cooperativa tecnológica.'
+    title: 'E-commerce Cooperativa "Martín Fierro"',
+    description: 'Plataforma de comercio electrónico para cooperativa tecnológica.',
+    imageUrl: 'src/assets/images/ecommerce.jpg',
+    category: 'Desarrollo Web'
   },
   {
     id: 3,
-    title: 'Sistema de Relevamiento Barrial Sanitario',
-    description: 'Aplicación para celulares que permite gestionar la carga de historias clínicas de los barrios populares.'
+    title: 'Relevamiento Barrial Sanitario',
+    description: 'Aplicación móvil para gestión de historias clínicas en barrios populares.',
+    imageUrl: 'src/assets/images/health-app.jpg',
+    category: 'Aplicación Móvil'
   },
   {
     id: 4,
-    title: 'Sistema de gestión de Farmacia',
-    description: 'Sistema de gestión de farmacia que permite la gestión de inventario, ventas y compras.'
+    title: 'Sistema de Gestión de Farmacia',
+    description: 'Sistema integral para gestión de inventario, ventas y compras farmacéuticas.',
+    imageUrl: 'src/assets/images/pharmacy-system.jpg',
+    category: 'Sistema de Gestión'
   },
   {
     id: 5,
-    title: 'Proyecto de seguridad hogareña IoT',
-    description: 'Proyecto de seguridad hogareña IoT que permite la gestión de la seguridad de la casa.'
+    title: 'Seguridad Hogareña IoT',
+    description: 'Sistema de seguridad inteligente para gestión remota del hogar.',
+    imageUrl: 'src/assets/images/iot-security.jpg',
+    category: 'IoT'
   },
-  {
-    id: 6,
-    title: 'Dashboard de Análisis de Datos',
-    description: 'Herramienta de business intelligence con visualizaciones interactivas para la toma de decisiones empresariales.'
-  }
 ];
 
 function Projects() {
@@ -53,11 +58,19 @@ function Projects() {
               className="project-card"
               onClick={() => handleProjectClick(project.id)}
             >
-              <div className="project-image">💻</div>
+              <div className="project-image-container">
+                <div 
+                  className="project-image"
+                  style={{ backgroundImage: `url(${project.imageUrl})` }}
+                  alt={project.title}
+                />
+                <div className="project-overlay"></div>
+              </div>
+              
               <div className="project-content">
+                <div className="project-indicator">{project.category}</div>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                <span className="project-button">Ver Detalles →</span>
               </div>
             </div>
           ))}
