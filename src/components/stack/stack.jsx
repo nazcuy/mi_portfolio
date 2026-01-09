@@ -52,30 +52,22 @@ const stackData = [
 function Stack() {
   const [activeCard, setActiveCard] = useState(null);
   const { ref: cardsRef, inView: cardsInView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   const { ref: imageRef, inView: imageInView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2,
-    delay: 300, // Delay para que aparezca después de las tarjetas
+    delay: 300,
   });
 
   const handleCardClick = (cardId) => {
     if (activeCard === cardId) {
       setActiveCard(null);
     } else {
-      // Si no, la abrimos (esto cierra cualquier otra abierta)
       setActiveCard(cardId);
     }
-  };
-
-  const handleCardHover = (cardId) => {
-    // Solo activa en hover si no hay ninguna activa por click
-    // Para que el hover no interfiera con el estado de click
-    // Comentado por ahora para usar solo click
-    // setActiveCard(cardId);
   };
 
 
@@ -92,7 +84,7 @@ function Stack() {
                 className={`stack-rectangle ${activeCard === item.id ? 'active' : ''} ${cardsInView ? 'slide-in' : ''}`}
                 onClick={() => handleCardClick(item.id)}
                 style={{ 
-                  transitionDelay: cardsInView ? `${index * 0.15}s` : '0s'
+                  transitionDelay: cardsInView ? `${index * 0.5}s` : '0s'
                 }}
               >
                 <h3 className="stack-rectangle-title">{item.category}</h3>
@@ -114,7 +106,6 @@ function Stack() {
           </div>
         </div>
         
-        {/* SECCIÓN DE IMAGEN INDEPENDIENTE */}
         <div className="stack-image-section" ref={imageRef}>
           <div className={`stack-image-container ${imageInView ? 'slide-up' : ''}`}>
             <img 
