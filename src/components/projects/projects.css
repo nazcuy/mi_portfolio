@@ -1,8 +1,8 @@
 .projects {
-  padding: 120px 20px 60px; /* Menos padding para un look más aireado */
+  padding: 120px 20px 60px;
   position: relative;
   overflow: hidden;
-  background-color: #0a0a0a; /* Fondo oscuro como Van Holtz */
+  background-color: #0a0a0a;
   color: #f0f0f0;
 }
 
@@ -17,8 +17,8 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  filter: grayscale(1) contrast(1.2) brightness(0.4);
-  opacity: 0.90;
+  filter: grayscale(1) contrast(1.2) brightness(0.6);
+  opacity: 1.5;
   z-index: 1;
 }
 
@@ -39,32 +39,29 @@
   font-weight: 300;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: transparent; /* Sin fondo blanco */
+  background-color: transparent;
   border-left: 5px solid var(--primary-color);
   position: relative;
   z-index: 10;
   display: inline-block;
-  letter-spacing: -0.02em; /* Kerning ajustado */
+  letter-spacing: -0.02em;
 }
 
-/* Grid de proyectos estilo galería */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Una sola columna, proyectos apilados */
-  gap: 120px; /* Espacio grande entre proyectos */
+  grid-template-columns: 1fr;
+  gap: 120px;
 }
 
-/* Tarjeta de proyecto estilo Van Holtz */
 .project-card {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  min-height: 80vh; /* Altura de viewport para impacto */
+  min-height: 80vh;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
 }
 
-/* Contenedor de imagen */
 .project-image-container {
   position: absolute;
   top: 0;

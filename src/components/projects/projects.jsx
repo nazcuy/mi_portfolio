@@ -1,13 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './projects.css';
+import tecladoNeon from '../../assets/images/teclado-neon.jpg';
 
 const projectsData = [
   {
     id: 1,
     title: 'Sistema de Generación Automatizada de Informes',
     description: 'Sistema de automatización gubernamental para generación masiva de informes PDF profesionales a partir de datos de Excel y Google Sheets.',
-    imageUrl: 'src/assets/images/automation-system.jpg',
+    imageUrl: tecladoNeon,
     category: 'Automatización'
   },
   {
