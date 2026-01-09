@@ -1,7 +1,7 @@
 .section-stack {
   background-color: #ffffff;
-  padding: 80px 20px;
-  min-height: 100vh;
+  padding: 100px 20px 10px 20px;
+  height: 109vh;
   position: relative;
   overflow: hidden;
 }
