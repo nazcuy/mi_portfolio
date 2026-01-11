@@ -3,37 +3,42 @@ import "./AboutMe.css";
 import CircularText from "../circularText/circularText";
 import RotatingText from "../rotatingText/RotatingText";
 
-// Datos para la línea de tiempo
 const timelineData = [
   {
-    number: "13",
-    period: "2023 - Presente",
-    title: "Desarrollador Full Stack Freelance",
-    description: "Desarrollo de aplicaciones web y móviles para clientes en diversos sectores."
+    number: "06",
+    period: "2024 - Presente",
+    title: "Coordinador Técnico de Desarrollo Web",
+    description: "Lidero la transformación digital en el Ministerio de Hábitat (PBA), coordinando equipos de desarrollo e integrando pasarelas de pago y sistemas críticos."
   },
   {
-    number: "12", 
-    period: "2022 - 2023",
-    title: "Sistema de Generación Automatizada de Informes",
-    description: "Arquitectura y desarrollo completo de sistema gubernamental."
+    number: "05",
+    period: "2020 - 2024",
+    title: "Análisis de Datos y Operaciones",
+    description: "Optimización de flujos logísticos y análisis de rendimiento en la Cooperativa Los Famosos 50, gestionando la trazabilidad de productos y comunicación digital."
   },
   {
-    number: "11",
-    period: "2021 - 2022", 
-    title: "Proyectos de Integración IoT",
-    description: "Desarrollo de sistemas de seguridad y automatización hogareña."
+    number: "04",
+    period: "2015 - 2019",
+    title: "Gestión Operativa y Compliance",
+    description: "Secretario General en el Consejo Escolar. Liderazgo de grandes equipos humanos, auditoría documental y garantía de continuidad de servicios distritales."
   },
   {
-    number: "10",
-    period: "2020 - 2021",
-    title: "Sistemas de Gestión Empresarial", 
-    description: "Creación de dashboards y herramientas de business intelligence."
+    number: "03",
+    period: "2014 - 2016",
+    title: "Dirección Editorial y QA",
+    description: "Gestión integral de la publicación 'La BizKocha!', liderando equipos de redacción y asegurando estándares de calidad y procesos de publicación."
   },
   {
-    number: "09",
-    period: "2019 - 2020",
-    title: "Primeros Proyectos Profesionales",
-    description: "Desarrollo de aplicaciones móviles y páginas web."
+    number: "02",
+    period: "2007 - 2014",
+    title: "Soporte Técnico TI y Sistemas ERP",
+    description: "Especialista en Troubleshooting y gestión de inventarios mediante SAP en Multiradio S.A., resolviendo incidencias críticas en hardware y software."
+  },
+  {
+    number: "01",
+    period: "2006 - 2007",
+    title: "Liderazgo y Gestión Comercial",
+    description: "Jefe de equipo en Ediciones Esmeralda. Formación de equipos de ventas y análisis estratégico de resultados en etapas tempranas de mi carrera."
   }
 ];
 
