@@ -30,25 +30,9 @@
 
 .text-rotate-element {
   display: inline-block;
-  font-family: "Manrope", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
   position: relative;
 }
 
 .text-rotate-space {
   white-space: pre;
-}
-
-/* Responsive base */
-@media (max-width: 768px) {
-  .text-rotate-element {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .text-rotate-element {
-    font-size: 1.3rem;
-  }
 }

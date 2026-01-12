@@ -52,7 +52,6 @@ function CircularTimeline() {
   return (
     <section id="circular-timeline">
       <div className="circular-timeline-container">
-        {/* Columna izquierda - CircularText + Contenido */}
         <div className="circular-timeline-left">
           <div className="circular-timeline-circular-container">
             <CircularText
@@ -71,18 +70,16 @@ function CircularTimeline() {
               <span className="subtitle-name">Nicolás Azcuy</span>
               <RotatingText
                 texts={["Frontend", "Backend", "Full Stack", "Apps Mobile", "Páginas Web", "Integración IoT"]}
-                staggerFrom="last"
-                initial={{ y: "100%", opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: "-120%", opacity: 0 }}
-                staggerDuration={0.02}
-                transition={{
-                  type: "Spring",
-                  damping: 500,
-                  stiffness: 400,
-                  mass: 0.5
-                }}
-                rotationInterval={2500}
+                mainClassName="rotating-text-container"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-200%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="rotating-text-split"
+                elementLevelClassName="rotating-text-element"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
                 splitBy="words"
               />
             </h2>
@@ -95,7 +92,6 @@ function CircularTimeline() {
           </div>
         </div>
 
-        {/* Columna derecha - Línea de tiempo */}
         <div className="timeline-section">
           <h2 className="timeline-title">Trayectoria & Experiencia</h2>
 

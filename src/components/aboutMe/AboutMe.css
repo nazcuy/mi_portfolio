@@ -16,7 +16,7 @@
   align-items: start;
 }
 
-/* ===== COLUMNA IZQUIERDA - CircularText + Contenido ===== */
+/* ===== COLUMNA IZQUIERDA ===== */
 .circular-timeline-left {
   display: flex;
   flex-direction: column;
@@ -29,7 +29,6 @@
   align-items: center;
 }
 
-/* Contenido de texto */
 .circular-timeline-content {
   padding-left: 20px;
   padding-top: 70px;
@@ -57,14 +56,12 @@
   gap: 0.75rem;
 }
 
-/* Estilo para el nombre en el subtítulo */
 .subtitle-name {
   font-weight: 700;
   margin-right: 0.75rem;
   color: #ffffff;
 }
 
-/* Descripción */
 .circular-timeline-description {
   font-family: "Manrope", sans-serif;
   font-size: 1.1rem;
@@ -74,50 +71,91 @@
   max-width: 600px;
 }
 
-/* ===== ESTILOS ESPECÍFICOS PARA ROTATINGTEXT ===== */
-.circular-timeline-subtitle .text-rotate-element {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(90deg, #8449bf 0%, #b366ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 0.02em;
+/* ===== ESTILOS PARA ROTATINGTEXT ===== */
+.rotating-text-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white !important;
+  border-radius: 30px !important;
+  padding: 8px 24px !important;
+  box-shadow: 0 4px 15px rgba(132, 73, 191, 0.15) !important;
+  border: 1px solid rgba(132, 73, 191, 0.2) !important;
+  min-width: 180px;
+  height: 50px;
+  margin-left: 12px;
   position: relative;
-  transition: all 0.3s ease;
-  display: inline-block;
+  overflow: hidden;
 }
 
-/* Efecto de subrayado sutil */
-.circular-timeline-subtitle .text-rotate-element::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
+/* El texto dentro del contenedor */
+.rotating-text-container .text-rotate-element {
+  color: #8449bf !important;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;
+  line-height: 1 !important;
+  position: relative;
+}
+
+/* Contenedor interno del texto rotativo */
+.rotating-text-container .text-rotate {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #8449bf, #b366ff);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Animación de pulso solo para el texto rotativo */
-@keyframes text-pulse {
-  0%, 100% {
-    opacity: 1;
+/* Para manejar el espacio entre palabras si hay más de una */
+.rotating-text-split {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos específicos para el elemento de texto */
+.rotating-text-element {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* Asegurar que no haya espacios adicionales */
+.rotating-text-container .text-rotate-word {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rotating-text-container {
+    min-width: 150px;
+    padding: 6px 20px !important;
+    height: 45px;
+    margin-left: 10px;
   }
-  50% {
-    opacity: 0.85;
+  
+  .rotating-text-container .text-rotate-element {
+    font-size: 1.5rem !important;
   }
 }
 
-.circular-timeline-subtitle .text-rotate-element {
-  animation: text-pulse 3s ease-in-out infinite;
+@media (max-width: 576px) {
+  .rotating-text-container {
+    min-width: 130px;
+    padding: 5px 16px !important;
+    height: 40px;
+    margin-left: 8px;
+  }
+  
+  .rotating-text-container .text-rotate-element {
+    font-size: 1.3rem !important;
+  }
 }
 
-/* ===== COLUMNA DERECHA - LÍNEA DE TIEMPO ===== */
+/* ===== COLUMNA DERECHA ===== */
 .timeline-section {
   max-width: 500px;
 }
@@ -204,7 +242,6 @@
   transition: all 0.4s ease;
 }
 
-/* Efectos hover */
 .timeline-item:hover {
   border-bottom-color: rgba(132, 73, 191, 0.2);
 }
@@ -218,7 +255,6 @@
   color: #8449bf;
 }
 
-/* Item activo */
 .timeline-item.active p {
   opacity: 1;
   max-height: 150px;
@@ -227,7 +263,6 @@
   padding-bottom: 50px;
 }
 
-/* Línea vertical de la timeline */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -351,5 +386,34 @@
   
   .timeline-item.active p {
     max-height: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .rotating-container {
+    min-width: 150px;
+    padding: 6px 16px;
+    margin-left: 8px;
+    height: 45px;
+  }
+  
+  .rotating-container .text-rotate {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .rotating-container {
+    min-width: 130px;
+    padding: 5px 14px;
+    margin-left: 6px;
+    height: 40px;
+  }
+  
+  .rotating-container .text-rotate {
+    font-size: 1.3rem;
+  }
+  
+  .circular-timeline-subtitle {
+    flex-wrap: wrap;
   }
 }
