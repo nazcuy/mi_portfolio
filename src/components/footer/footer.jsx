@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Sobre Código Fidel</h3>
+            <h3>Sobre Nicolás Azcuy</h3>
             <p>
               Cooperativa de Trabajadores Informáticos comprometida con la excelencia
               tecnológica y el trabajo colaborativo desde hace más de una década.
@@ -15,9 +15,8 @@ function Footer() {
           </div>
           <div className="footer-section">
             <h3>Información de Contacto</h3>
-            <p>📍 Av. Tecnológica 1234, Ciudad Digital</p>
-            <p>📞 +54 11 2345-6789</p>
-            <p>✉️ info@codigofidel.coop</p>
+            <p>📞 +54 11 3076-6950</p>
+            <p>✉️ nico.azcuy@gmail.com</p>
           </div>
           <div className="footer-section">
             <h3>Horario de Atención</h3>

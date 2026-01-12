@@ -1,8 +1,6 @@
 .text-rotate {
-  display: flex;
-  flex-wrap: wrap;
-  white-space: pre-wrap;
   position: relative;
+  display: inline-block;
 }
 
 .text-rotate-sr-only {
@@ -17,20 +15,40 @@
   border: 0;
 }
 
-.text-rotate-word {
+.text-rotate-lines,
+.text-rotate {
   display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
 }
 
-.text-rotate-lines {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.text-rotate-word {
+  display: inline-flex;
+  align-items: center;
 }
 
 .text-rotate-element {
   display: inline-block;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
 }
 
 .text-rotate-space {
   white-space: pre;
+}
+
+/* Responsive base */
+@media (max-width: 768px) {
+  .text-rotate-element {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-rotate-element {
+    font-size: 1.3rem;
+  }
 }

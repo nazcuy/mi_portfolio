@@ -1,4 +1,3 @@
-/* circular-timeline.css - Nueva sección sin conflictos */
 #circular-timeline {
   min-height: 100vh;
   padding: 80px 20px;
@@ -17,7 +16,7 @@
   align-items: start;
 }
 
-/* Columna izquierda - CircularText + Contenido */
+/* ===== COLUMNA IZQUIERDA - CircularText + Contenido ===== */
 .circular-timeline-left {
   display: flex;
   flex-direction: column;
@@ -33,6 +32,7 @@
 /* Contenido de texto */
 .circular-timeline-content {
   padding-left: 20px;
+  padding-top: 70px;
 }
 
 .circular-timeline-title {
@@ -57,7 +57,67 @@
   gap: 0.75rem;
 }
 
-/* Timeline - mantengo estos nombres igual porque no hay conflicto */
+/* Estilo para el nombre en el subtítulo */
+.subtitle-name {
+  font-weight: 700;
+  margin-right: 0.75rem;
+  color: #ffffff;
+}
+
+/* Descripción */
+.circular-timeline-description {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #a0b3d1;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA ROTATINGTEXT ===== */
+.circular-timeline-subtitle .text-rotate-element {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #8449bf 0%, #b366ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.02em;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Efecto de subrayado sutil */
+.circular-timeline-subtitle .text-rotate-element::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #8449bf, #b366ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+/* Animación de pulso solo para el texto rotativo */
+@keyframes text-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.circular-timeline-subtitle .text-rotate-element {
+  animation: text-pulse 3s ease-in-out infinite;
+}
+
+/* ===== COLUMNA DERECHA - LÍNEA DE TIEMPO ===== */
 .timeline-section {
   max-width: 500px;
 }
@@ -101,7 +161,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 3rem;
   font-weight: 800;
-  color: var(--primary-color);
+  color: #8449bf;
   line-height: 1;
   min-width: 60px;
   text-align: right;
@@ -117,7 +177,7 @@
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #8449bf;
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -144,6 +204,7 @@
   transition: all 0.4s ease;
 }
 
+/* Efectos hover */
 .timeline-item:hover {
   border-bottom-color: rgba(132, 73, 191, 0.2);
 }
@@ -154,15 +215,19 @@
 }
 
 .timeline-item:hover h3 {
-  color: var(--primary-color);
+  color: #8449bf;
 }
 
+/* Item activo */
 .timeline-item.active p {
   opacity: 1;
-  max-height: 100px;
-  margin-top: 8px;
+  max-height: 150px;
+  margin: 8px auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
+/* Línea vertical de la timeline */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -182,7 +247,7 @@
   bottom: 50%;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
   .circular-timeline-container {
     gap: 60px;
@@ -220,6 +285,19 @@
     gap: 0.5rem;
   }
   
+  .subtitle-name {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .circular-timeline-description {
+    font-size: 1rem;
+  }
+  
+  .circular-timeline-subtitle .text-rotate-element {
+    font-size: 1.5rem;
+  }
+  
   .timeline-title {
     font-size: 2.2rem;
     margin-bottom: 40px;
@@ -233,11 +311,24 @@
     font-size: 2.5rem;
     min-width: 50px;
   }
+  
+  .timeline-item.active {
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .timeline-item.active p {
+    max-height: 600px;
+  }
 }
 
 @media (max-width: 576px) {
   .circular-timeline-title {
     font-size: 2.3rem;
+  }
+  
+  .circular-timeline-subtitle .text-rotate-element {
+    font-size: 1.3rem;
   }
   
   .timeline-title {
@@ -251,5 +342,14 @@
   
   .timeline-item h3 {
     font-size: 1.1rem;
+  }
+  
+  .timeline-item.active {
+    padding-bottom: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-item.active p {
+    max-height: 700px;
   }
 }
