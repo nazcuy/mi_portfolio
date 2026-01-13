@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import teclado from '../../assets/images/teclado.jpg';
+import teclado from '../../assets/images/consejo6byn.jpg';
 import './stack.css';
 
 const stackData = [
