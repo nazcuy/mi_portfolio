@@ -1,36 +1,38 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './projects.css';
+import PBA from '../../assets/images/min-hab.png';
 import tecladoNeon from '../../assets/images/teclado-neon.jpg';
+import coop from '../../assets/images/coop-pnt-fondo.png';
 
 const projectsData = [
   {
     id: 1,
-    title: 'Sistema de Generación Automatizada de Informes',
-    description: 'Sistema de automatización gubernamental para generación masiva de informes PDF profesionales a partir de datos de Excel y Google Sheets.',
-    imageUrl: tecladoNeon,
+    title: 'Generador Automatizado de Informes Gubernamentales',
+    description: 'Solución escalable diseñada para el Gobierno de la PBA que automatiza la creación masiva de reportes PDF profesionales. Integra flujos de datos desde Excel y Google Sheets, optimizando tiempos de procesamiento y garantizando la consistencia institucional.',
+    imageUrl: PBA,
     category: 'Automatización'
   },
   {
     id: 2,
-    title: 'E-commerce Cooperativa "Martín Fierro"',
-    description: 'Plataforma de comercio electrónico para cooperativa tecnológica.',
-    imageUrl: 'src/assets/images/ecommerce.jpg',
-    category: 'Desarrollo Web'
+    title: 'Generador Automatizado de Informes Gubernamentales',
+    description: 'Solución escalable diseñada para el Gobierno de la PBA que automatiza la creación masiva de reportes PDF profesionales. Integra flujos de datos desde Excel y Google Sheets, optimizando tiempos de procesamiento y garantizando la consistencia institucional.',
+    imageUrl: PBA,
+    category: 'Automatización'
   },
   {
     id: 3,
-    title: 'Relevamiento Barrial Sanitario',
-    description: 'Aplicación móvil para gestión de historias clínicas en barrios populares.',
-    imageUrl: 'src/assets/images/health-app.jpg',
-    category: 'Aplicación Móvil'
+    title: 'Plataforma E-commerce "Martín Fierro"',
+    description: 'Desarrollo de comercio electrónico diseñada para potenciar las ventas de la Cooperativa Tecnológica Martín Fierro. Incluye gestión dinámica de productos, pasarela de pagos y una experiencia de usuario optimizada para el sector IT.',
+    imageUrl: coop,
+    category: 'Desarrollo Web'
   },
   {
     id: 4,
-    title: 'Sistema de Gestión de Farmacia',
-    description: 'Sistema integral para gestión de inventario, ventas y compras farmacéuticas.',
-    imageUrl: 'src/assets/images/pharmacy-system.jpg',
-    category: 'Sistema de Gestión'
+    title: 'App Móvil de Salud Comunitaria',
+    description: 'Aplicación de recolección de datos clínicos con soporte offline para barrios populares. Permite la digitalización de fichas médicas y sincronización centralizada de registros sanitarios.',
+    imageUrl: tecladoNeon,
+    category: 'Aplicación Móvil'
   },
   {
     id: 5,
