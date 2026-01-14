@@ -27,23 +27,12 @@
   z-index: 10;
 }
 
-.stack-content {
+.stack-cards {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0px;
   align-items: flex-start;
-  padding: 0 3% 0 0;
-  gap: 20px;
-}
-
-/* Lado izquierdo - Rectángulos */
-.stack-left {
-  flex: 3;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  gap: 5px;
   width: 100%;
-  max-width: 1000px;
-  z-index: 3;
 }
 
 .stack-rectangle {
