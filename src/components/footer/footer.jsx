@@ -43,10 +43,10 @@ function Footer() {
             <div className="footer-social">
               <h4>Conectemos</h4>
               <div className="social-icons">
-                <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://github.com/nazcuy" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaGithub />
                 </a>
-                <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.linkedin.com/in/nicolas-azcuy-prog" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaLinkedin />
                 </a>
               </div>

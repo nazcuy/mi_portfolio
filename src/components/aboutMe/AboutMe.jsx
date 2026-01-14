@@ -78,7 +78,7 @@ function CircularTimeline() {
                 staggerDuration={0.025}
                 splitLevelClassName="rotating-text-split"
                 elementLevelClassName="rotating-text-element"
-                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                transition={{ type: "spring", damping: 40, stiffness: 300 }}
                 rotationInterval={2000}
                 splitBy="words"
               />
