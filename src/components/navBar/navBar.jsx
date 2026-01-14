@@ -31,12 +31,12 @@ function Navbar() {
           </li>
           <li>
             <Link to="https://github.com/nazcuy">
-              <img width="45" height="45" src="https://img.icons8.com/wired/64/FFFFFF/github.png" alt="github"/>
+              <img className="icon-github" width="45" height="45" src="https://img.icons8.com/wired/64/FFFFFF/github.png" alt="github"/>
             </Link>
           </li>
           <li>
             <Link to="https://www.linkedin.com/in/nicolas-azcuy-prog/">
-              <img width="45" height="45" src="https://img.icons8.com/wired/64/FFFFFF/linkedin--v1.png" alt="linkedin--v1"/>
+              <img className="icon-linkedin" width="45" height="45" src="https://img.icons8.com/wired/64/FFFFFF/linkedin--v1.png" alt="linkedin--v1"/>
             </Link>
           </li>
         </ul>
