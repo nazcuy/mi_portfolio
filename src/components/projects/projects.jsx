@@ -1,23 +1,25 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './projects.css';
-import PBA from '../../assets/images/min-hab.png';
+import paga from '../../assets/images/ivba.png';
+import pba from '../../assets/images/min-hab.png';
 import tecladoNeon from '../../assets/images/teclado-neon.jpg';
 import coop from '../../assets/images/coop-pnt-fondo.png';
+import circuit from '../../assets/images/fondo-de-placa-de-circuito.jpg';
 
 const projectsData = [
   {
     id: 1,
-    title: 'Generador Automatizado de Informes Gubernamentales',
-    description: 'Solución escalable diseñada para el Gobierno de la PBA que automatiza la creación masiva de reportes PDF profesionales. Integra flujos de datos desde Excel y Google Sheets, optimizando tiempos de procesamiento y garantizando la consistencia institucional.',
-    imageUrl: PBA,
-    category: 'Automatización'
+    title: 'Portal de Autogestión de Pagos',
+    description: 'Solución web para la digitalización de cobros del Instituto de la Vivienda. Implementa un motor de búsqueda por DNI/ID, generación dinámica de comprobantes de pagodescarga de boletas electrónicas e integración con pasarela de pago online Provincia-NET.',
+    imageUrl: paga,
+    category: 'Desarrollo Web'
   },
   {
     id: 2,
     title: 'Generador Automatizado de Informes Gubernamentales',
     description: 'Solución escalable diseñada para el Gobierno de la PBA que automatiza la creación masiva de reportes PDF profesionales. Integra flujos de datos desde Excel y Google Sheets, optimizando tiempos de procesamiento y garantizando la consistencia institucional.',
-    imageUrl: PBA,
+    imageUrl: pba,
     category: 'Automatización'
   },
   {
@@ -38,7 +40,7 @@ const projectsData = [
     id: 5,
     title: 'Seguridad Hogareña IoT',
     description: 'Sistema de seguridad inteligente para gestión remota del hogar.',
-    imageUrl: 'src/assets/images/iot-security.jpg',
+    imageUrl: circuit,
     category: 'IoT'
   },
 ];

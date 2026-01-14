@@ -1,7 +1,7 @@
 #circular-timeline {
   min-height: 100vh;
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #0f1724 0%, #0b1220 100%);
+  padding: 210px 20px 100px;
+  background: linear-gradient(180deg, black 0%, #0b1220 100%);
   color: #e6eef8;
   display: flex;
   align-items: center;
