@@ -3,6 +3,10 @@ import pba from '../../src/assets/images/min-hab.png';
 import tecladoNeon from '../../src/assets/images/teclado-neon.jpg';
 import coop from '../../src/assets/images/coop-pnt-fondo.png';
 import circuit from '../../src/assets/images/fondo-de-placa-de-circuito.jpg';
+import dashboard from '../../src/assets/images/dashboard.png';
+import QRconnection from '../../src/assets/images/QRconnection.png';
+import connectionOk from '../../src/assets/images/connectionOk.png';
+import encuestaEnviadaFront from '../../src/assets/images/encuestaEnviadaFront.png';
 
 const projectsData = [
   {
@@ -51,6 +55,17 @@ const projectsData = [
   },
   {
     id: 5,
+    title: 'PollSender - Sistema de Encuestas Masivas',
+    description: 'Automatiza el envío de encuestas a múltiples grupos de app de mensajería simultáneamente.',
+    imageUrl: dashboard,
+    category: 'Aplicación de escritorio',
+    fullDescription: 'PollSender es una solución robusta Full-Stack diseñada para transformar la comunicación unidireccional en una herramienta de gestión de datos y toma de decisiones en tiempo real. Aunque es versátil para diversos sectores, su arquitectura está optimizada para entornos de Seguridad e Higiene (SySO) y Recursos Humanos, donde la verificación de la formación y el cumplimiento de normas es crítica. La aplicación permite a técnicos y coordinadores desplegar encuestas dinámicas a múltiples grupos operativos de forma simultánea, eliminando la carga administrativa del envío manual y centralizando el monitoreo del proceso mediante WebSockets para una trazabilidad total.', 
+    videoUrl: "https://www.youtube.com/embed/nxRt_iXuXkc", 
+    gallery: [dashboard, QRconnection, connectionOk, encuestaEnviadaFront], 
+    technologies: ["React", "Node.js", "Express.js", "Socket.IO", "Puppeteer"],
+  },
+  {
+    id: 6,
     title: 'Seguridad Hogareña IoT',
     description: 'Sistema de seguridad inteligente para gestión remota del hogar.',
     imageUrl: circuit,
