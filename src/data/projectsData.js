@@ -15,10 +15,10 @@ const projectsData = [
     description: 'Solución web para la digitalización de cobros del Instituto de la Vivienda. Implementa un motor de búsqueda por DNI/ID, generación dinámica de comprobantes de pagodescarga de boletas electrónicas e integración con pasarela de pago online Provincia-NET.',
     imageUrl: paga,
     category: 'Desarrollo Web',
-    fullDescription: 'Este sistema fue diseñado para...', 
-    videoUrl: "https://www.youtube.com/embed/TU_ID", 
+    fullDescription: 'Participé en la transformación del portal institucional de vivienda de la Provincia de Buenos Aires, que pasó de ser un sitio informativo a una plataforma transaccional de alta demanda. Contribuí a la integración de la pasarela de pagos ProvinciaNET (QR, tarjetas, Cuenta DNI) y a la conexión en tiempo real con el sistema SIDUV. Formé parte del armado del módulo de autogestión “Mis Datos” y de la incorporación de canales de atención por WhatsApp y correo electrónico. El resultado fue una experiencia digital más simple para miles de adjudicatarios y una reducción significativa de los trámites presenciales, gracias al trabajo conjunto entre las áreas de IT, Finanzas y equipos externos de desarrollo y diseño UX/UI.', 
+    videoUrl: "https://www.youtube.com/watch?v=YNwGqTwYvhw",
     gallery: [paga, pba], 
-    technologies: ["React", "Node.js", "MySQL"],
+    technologies: ["Provincia-NET", "SIDUV"],
   },
   {
     id: 2,
