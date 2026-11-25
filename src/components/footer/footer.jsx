@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './footer.css';
 
@@ -56,12 +57,23 @@ function Footer() {
           {/* Columna 3: Enlaces rápidos */}
           <div className="footer-section">
             <h3>Enlaces Rápidos</h3>
+
             <ul className="footer-links">
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#proyectos">Proyectos</a></li>
-              <li><a href="#habilidades">Habilidades</a></li>
-              <li><a href="#experiencia">Experiencia</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+              <li>
+                <Link to="/#presentation">Inicio</Link>
+              </li>
+              <li>
+                <Link to="/#proyectos">Proyectos</Link>
+              </li>
+              <li>
+                <Link to="/#stack">Stack Tecnológico</Link>
+              </li>
+              <li>
+                <Link to="/#circular-timeline">Sobre mí</Link>
+              </li>
+              <li>
+                <Link to="/#contacto">Contacto</Link>
+              </li>
             </ul>
           </div>
 
@@ -75,11 +87,6 @@ function Footer() {
           <p className="copyright">
             © {currentYear} Nicolás Azcuy. Todos los derechos reservados.
           </p>
-          <div className="footer-legal">
-            <a href="#privacidad" className="legal-link">Política de Privacidad</a>
-            <span className="separator">•</span>
-            <a href="#terminos" className="legal-link">Términos de Uso</a>
-          </div>
         </div>
 
       </div>
