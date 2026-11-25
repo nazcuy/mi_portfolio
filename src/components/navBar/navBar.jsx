@@ -1,26 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './navBar.css';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
+import './navBar.css';
 import logo from '../../assets/images/Nicolas-Azcuy.jpg';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <nav id="navbar" className="navbar">
+    <nav
+      id="navbar"
+      className={`navbar ${menuOpen ? 'navbar-open' : ''}`}
+    >
       <div className="navbar-container">
 
-        <Link to="/#presentation" className="navbar-brand">
+        {/* Logo y currículum */}
+        <div className="navbar-brand-group">
 
-          <div className="navbar-logo">
-            <img
-              src={logo}
-              alt="Nicolás Azcuy"
-              style={{ width: '100%', height: '100%' }}
-            />
-          </div>
+          <Link
+            to="/#presentation"
+            className="navbar-brand"
+            onClick={closeMenu}
+            aria-label="Ir al inicio"
+          >
+            <div className="navbar-logo">
+              <img src={logo} alt="Nicolás Azcuy" />
+            </div>
+          </Link>
 
-          {/* Icono del currículum: se conserva para vincular el PDF */}
-          <div className="curriculum">
+          {/* Icono del CV: se conserva para adjuntar el PDF */}
+          <div
+            className="curriculum"
+            title="Currículum"
+          >
             <img
               width="45"
               height="45"
@@ -29,35 +46,68 @@ function Navbar() {
             />
           </div>
 
-        </Link>
+        </div>
 
-        <ul className="navbar-menu">
+        {/* Botón del menú hamburguesa */}
+        <button
+          type="button"
+          className="navbar-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={menuOpen}
+          aria-controls="navbar-menu"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* Navegación */}
+        <ul
+          id="navbar-menu"
+          className={`navbar-menu ${menuOpen ? 'is-open' : ''}`}
+        >
 
           <li>
-            <Link to="/#proyectos" className="navbar-link">
+            <Link
+              to="/#proyectos"
+              className="navbar-link"
+              onClick={closeMenu}
+            >
               Proyectos
             </Link>
           </li>
 
           <li>
-            <Link to="/#stack" className="navbar-link">
+            <Link
+              to="/#stack"
+              className="navbar-link"
+              onClick={closeMenu}
+            >
               Stack Tecnológico
             </Link>
           </li>
 
           <li>
-            <Link to="/#circular-timeline" className="navbar-link">
+            <Link
+              to="/#circular-timeline"
+              className="navbar-link"
+              onClick={closeMenu}
+            >
               Sobre mí
             </Link>
           </li>
 
           <li>
-            <Link to="/#contacto" className="navbar-link">
+            <Link
+              to="/#contacto"
+              className="navbar-link"
+              onClick={closeMenu}
+            >
               Contacto
             </Link>
           </li>
 
-          <li>
+          {/* Redes sociales */}
+          <li className="navbar-social">
             <a
               href="https://github.com/nazcuy"
               target="_blank"
@@ -72,9 +122,7 @@ function Navbar() {
                 alt=""
               />
             </a>
-          </li>
 
-          <li>
             <a
               href="https://www.linkedin.com/in/nicolas-azcuy-prog/"
               target="_blank"
